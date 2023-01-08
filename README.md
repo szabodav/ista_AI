@@ -1,4 +1,6 @@
-Example Discord bot written in Python that uses the [completions API](https://beta.openai.com/docs/api-reference/completions) to have conversations with the `text-davinci-003` model, and the [moderations API](https://beta.openai.com/docs/api-reference/moderations) to filter the messages.
+IstaAI bot written in Python that uses the [completions API](https://beta.openai.com/docs/api-reference/completions) to have conversations with the `text-davinci-003` model, and the [moderations API](https://beta.openai.com/docs/api-reference/moderations) to filter the messages.
+
+This bot is based on https://github.com/openai/gpt-discord-bot
 
 This bot uses the [OpenAI Python Library](https://github.com/openai/openai-python) and [discord.py](https://discordpy.readthedocs.io/).
 
@@ -49,3 +51,15 @@ Ensure that the channels your bots have access to allow the bot to have these pe
 - Manage Threads
 - Read Message History
 - Use Application Commands
+
+# Current bot configuration
+
+The above described functionality is achievable by main_threaded.py. The main.py file is an attempt at replacing threaded answers with @ mentions within a channel (but to no avail so far). 
+
+# Roadmap
+
+The following features needed to complete the bot:
+- Give the bot access to Discord server data and enable it to generate responses via OpenAI API feeding off of the server data (message history, channels, user activity, etc)
+- Give the bot the ability to "consume content" by uploading a file (txt, pdf) to the message
+- Give the bot the ability to "consume a website" by placing a URL to the message
+- Give the bot the ability to set predefined prompts being run on certain predefined criteria ("give me a summary and a basic sentiment analysis every 7 days of #general starting now", etc)
